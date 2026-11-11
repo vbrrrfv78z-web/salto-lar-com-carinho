@@ -3,7 +3,6 @@ import { PageHero, WhatsCta } from "@/components/site-layout";
 import { CIDADES, pageHead } from "@/lib/site";
 
 export const Route = createFileRoute("/cidades-atendidas")({
-  staticData: { sitemap: true },
   head: () =>
     pageHead(
       "/cidades-atendidas",

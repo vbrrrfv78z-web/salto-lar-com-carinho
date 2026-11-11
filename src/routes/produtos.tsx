@@ -11,7 +11,6 @@ import duchas from "@/assets/duchas-eletrica.jpg.asset.json";
 import caixas from "@/assets/caixas-termicas.jpg.asset.json";
 
 export const Route = createFileRoute("/produtos")({
-  staticData: { sitemap: true },
   head: () =>
     pageHead(
       "/produtos",

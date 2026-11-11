@@ -4,7 +4,6 @@ import { POSTS } from "@/lib/posts";
 import { pageHead } from "@/lib/site";
 
 export const Route = createFileRoute("/blog/")({
-  staticData: { sitemap: true },
   head: () =>
     pageHead(
       "/blog",

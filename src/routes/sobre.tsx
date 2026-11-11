@@ -4,7 +4,6 @@ import { pageHead } from "@/lib/site";
 import fachada from "@/assets/fachada.jpg.asset.json";
 
 export const Route = createFileRoute("/sobre")({
-  staticData: { sitemap: true },
   head: () =>
     pageHead(
       "/sobre",

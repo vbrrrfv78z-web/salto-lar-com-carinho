@@ -13,7 +13,6 @@ const faqs = [
 ];
 
 export const Route = createFileRoute("/duvidas")({
-  staticData: { sitemap: true },
   head: () => ({
     ...pageHead(
       "/duvidas",

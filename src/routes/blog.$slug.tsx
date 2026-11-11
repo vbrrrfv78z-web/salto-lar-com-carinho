@@ -4,7 +4,6 @@ import { POSTS } from "@/lib/posts";
 import { pageHead } from "@/lib/site";
 
 export const Route = createFileRoute("/blog/$slug")({
-  staticData: { sitemap: false },
   loader: ({ params }) => {
     const post = POSTS.find((p) => p.slug === params.slug);
     if (!post) throw notFound();
