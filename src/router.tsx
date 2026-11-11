@@ -12,6 +12,7 @@ export const getRouter = () => {
     scrollRestoration: true,
     // Lets Query own freshness; set caching defaults on the QueryClient, not the router.
     defaultPreloadStaleTime: 0,
+    defaultPreload: "intent",
   });
 
   return router;
