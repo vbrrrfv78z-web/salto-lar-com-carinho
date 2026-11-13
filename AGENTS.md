@@ -31,3 +31,4 @@ use the editor.
 
 - Shared header/footer live in src/components/site-layout.tsx and wrap <Outlet /> in __root; per-page SEO uses pageHead() from src/lib/site.ts so every route has its own title/description/canonical.
 - Blog posts are static in src/lib/posts.ts until a posting panel exists; sitemap.xml is generated from the page list plus POSTS.
+- Keep supplied branding pixels unchanged; serve optimized photo/logo assets through CDN pointers and derive the local favicon from the same logo.

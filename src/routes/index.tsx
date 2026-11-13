@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import fachada from "@/assets/fachada.jpg.asset.json";
+import reginaldo from "@/assets/reginaldo.webp.asset.json";
 import pecasPanela from "@/assets/pecas-panela.jpg.asset.json";
 import copos from "@/assets/copos-liquidificador.jpg.asset.json";
 import moveis from "@/assets/acessorios-moveis.jpg.asset.json";
@@ -39,16 +39,16 @@ function Index() {
     <div className="min-h-screen bg-background text-foreground">
       {/* Hero */}
       <section className="bg-lilac-gradient">
-        <div className="mx-auto grid max-w-6xl items-center gap-10 px-5 pb-14 pt-10 md:grid-cols-2 md:py-20">
+        <div className="mx-auto grid max-w-6xl items-center gap-7 px-5 pb-10 pt-7 md:grid-cols-2 md:gap-10 md:py-12">
           <div>
             <p className="text-xs font-extrabold uppercase tracking-[0.18em] text-brand-deep">Loja de família · Salto, SP</p>
-            <h1 className="mt-4 font-display text-4xl font-semibold leading-[1.05] text-brand-deep sm:text-5xl md:text-6xl">
+            <h1 className="mt-4 font-display text-3xl font-semibold leading-[1.1] text-brand-deep sm:text-4xl lg:text-5xl">
               Conserto de panela de pressão e peças para o lar em Salto, SP
             </h1>
-            <p className="mt-5 max-w-md text-lg text-accent-foreground/85">
+            <p className="mt-4 max-w-md text-base text-accent-foreground/85 sm:text-lg">
               Consertamos sua panela, achamos a peça que falta e explicamos as opções com sinceridade — mesmo quando a melhor saída é a mais barata.
             </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-6 flex flex-col gap-3 xl:flex-row">
               <a href={WHATSAPP} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-4 font-bold text-primary-foreground shadow-soft">
                 <WhatsIcon /> Mandar foto pelo WhatsApp
               </a>
@@ -57,13 +57,13 @@ function Index() {
               </a>
             </div>
           </div>
-          <div className="relative">
-            <img src={fachada.url} alt="Fachada lilás da loja Salto Lar, número 849" fetchPriority="high" decoding="async" width={1200} height={900} className="aspect-[4/3] w-full rounded-3xl object-cover shadow-soft" />
-            <div className="absolute -bottom-5 left-4 rounded-2xl bg-card px-4 py-3 shadow-soft">
-              <p className="text-sm font-bold text-primary">A loja lilás do Centro</p>
-              <p className="text-xs text-muted-foreground">Você não tem como errar 💜</p>
-            </div>
-          </div>
+          <figure className="mx-auto w-full max-w-md">
+            <img src={reginaldo.url} alt="Reginaldo na bancada de conserto, com panelas de pressão e ferramentas" fetchPriority="high" decoding="async" width={768} height={1024} className="aspect-[4/5] w-full rounded-lg object-cover object-center shadow-soft" />
+            <figcaption className="mt-3 flex items-baseline justify-between gap-3 text-sm text-brand-deep">
+              <span className="font-bold">Reginaldo · Salto Lar</span>
+              <span className="text-right">Antes de trocar, traz aqui.</span>
+            </figcaption>
+          </figure>
         </div>
       </section>
 
