@@ -66,6 +66,7 @@
   --color-lilac: var(--lilac);
   --color-lilac-soft: var(--lilac-soft);
   --color-whatsapp: var(--whatsapp);
+  --color-logo-surface: var(--logo-surface);
   --font-display: "Fraunces", Georgia, serif;
   --font-sans: "Nunito Sans", system-ui, sans-serif;
   --color-sidebar: var(--sidebar);
@@ -103,6 +104,7 @@
   --lilac: oklch(0.78 0.12 312);
   --lilac-soft: oklch(0.92 0.05 312);
   --whatsapp: oklch(0.62 0.15 150);
+  --logo-surface: oklch(0 0 0);
   --gradient-lilac: linear-gradient(160deg, oklch(0.86 0.09 315), oklch(0.76 0.13 308));
   --shadow-soft: 0 20px 50px -20px color-mix(in oklab, var(--primary) 40%, transparent);
   --chart-1: oklch(0.646 0.222 41.116);

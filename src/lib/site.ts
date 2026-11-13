@@ -20,6 +20,7 @@ export function pageHead(path: string, title: string, description: string, type 
       { property: "og:description", content: description },
       { property: "og:type", content: type },
       { property: "og:url", content: url },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: url }],
   };

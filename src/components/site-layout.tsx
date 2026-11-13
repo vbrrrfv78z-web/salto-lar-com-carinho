@@ -1,6 +1,9 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { ADDRESS, CIDADES, PHONE_DISPLAY, PHONE_TEL, WHATSAPP } from "@/lib/site";
+import logo from "@/assets/logo-salto-lar.webp.asset.json";
+import { Button } from "@/components/ui/button";
+import { Menu, X } from "lucide-react";
 
 export function WhatsIcon() {
   return (
@@ -24,9 +27,8 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-30 border-b border-border bg-background/95 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-5 py-3">
-        <Link to="/" className="leading-none" onClick={() => setOpen(false)}>
-          <span className="block font-display text-xl font-semibold text-primary">Salto Lar</span>
-          <span className="text-xs italic text-muted-foreground">Tudo para seu lar</span>
+        <Link to="/" aria-label="Salto Lar — início" className="shrink-0 overflow-hidden rounded-md bg-logo-surface px-2 py-1.5" onClick={() => setOpen(false)}>
+          <img src={logo.url} alt="Salto Lar — Tudo para seu lar" width={600} height={334} className="h-12 w-auto sm:h-14" decoding="async" />
         </Link>
         <nav className="hidden gap-6 text-sm font-semibold text-foreground/80 lg:flex">
           {NAV.map((n) => (
@@ -39,15 +41,17 @@ export function SiteHeader() {
           <a href={WHATSAPP} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2.5 text-sm font-bold text-primary-foreground">
             <WhatsIcon /> <span className="hidden sm:inline">Falar com a loja</span>
           </a>
-          <button
+          <Button
+            variant="outline"
+            size="icon"
             type="button"
             aria-label={open ? "Fechar menu" : "Abrir menu"}
             aria-expanded={open}
             onClick={() => setOpen((o) => !o)}
             className="grid h-10 w-10 place-items-center rounded-full border border-border text-primary lg:hidden"
           >
-            <span className="text-xl leading-none">{open ? "✕" : "☰"}</span>
-          </button>
+            {open ? <X aria-hidden /> : <Menu aria-hidden />}
+          </Button>
         </div>
       </div>
       {open && (
