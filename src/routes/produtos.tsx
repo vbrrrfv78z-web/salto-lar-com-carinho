@@ -28,7 +28,7 @@ const itens = [
   { img: moveis.url, title: "Acessórios para móveis", text: "Pés, rodízios, puxadores e dobradiças." },
   { img: churrasqueiras.url, title: "Churrasqueiras e fogareiros", text: "Grelhas, fogareiros e itens para gás." },
   { img: toalhas.url, title: "Toalhas e plástico de mesa", text: "Plástico de mesa vendido por metro, várias estampas." },
-  { img: caixas.url, title: "Caixas térmicas", text: "Do 3 ao 45 litros." },
+  { img: caixas.url, title: "Caixas de isopor", text: "Do 3 ao 45 litros." },
 ];
 
 function Produtos() {

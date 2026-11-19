@@ -31,7 +31,7 @@ const categorias = [
   { img: duchas.url, title: "Duchas e elétrica", text: "Chuveiros, resistências, extensões e válvulas." },
   { img: churrasqueiras.url, title: "Churrasqueiras e fogareiros", text: "Grelhas, fogareiros e itens para gás." },
   { img: toalhas.url, title: "Toalhas de mesa", text: "Plástico de mesa vendido por metro." },
-  { img: caixas.url, title: "Caixas térmicas", text: "Do 3 ao 45 litros." },
+  { img: caixas.url, title: "Caixas de isopor", text: "Do 3 ao 45 litros." },
 ];
 
 function Index() {
@@ -147,7 +147,7 @@ function Index() {
             <p className="mt-3 text-primary-foreground/80">Clientes de Salto, Itu, Indaiatuba, Porto Feliz e região. <Link to="/cidades-atendidas" className="underline underline-offset-4">Ver cidades atendidas</Link></p>
             <div className="mt-8 space-y-5 text-lg">
               <div><p className="text-sm font-bold uppercase tracking-wider text-lilac">Endereço</p><p>{ADDRESS}</p></div>
-              <div><p className="text-sm font-bold uppercase tracking-wider text-lilac">Horários</p><p>Segunda a sexta, 8h às 17h<br />Sábado, 8h às 13h</p></div>
+              <div><p className="text-sm font-bold uppercase tracking-wider text-lilac">Horários</p><p>Segunda a sexta, 8h às 18h<br />Sábado, 8h às 13h<br />Domingo fechado</p></div>
               <div><p className="text-sm font-bold uppercase tracking-wider text-lilac">Telefone</p><a href={PHONE_TEL} className="underline underline-offset-4">{PHONE_DISPLAY}</a><br /><a href={CONTATO_TEL} className="underline underline-offset-4">{CONTATO_DISPLAY}</a> (contato)<br /><a href={WHATSAPP} target="_blank" rel="noreferrer" className="underline underline-offset-4">{WHATSAPP_DISPLAY}</a> (WhatsApp)</div>
             </div>
           </div>

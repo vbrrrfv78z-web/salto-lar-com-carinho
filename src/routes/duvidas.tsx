@@ -7,7 +7,7 @@ const faqs = [
   ["Vocês consertam panela de pressão?", "Sim. Trocamos borracha de vedação, cabo, alça, válvula e pino de diversas marcas. Traga a panela ou mande uma foto pelo WhatsApp."],
   ["Como sei qual peça serve na minha panela?", "Traga a peça antiga ou a tampa. Se preferir, mande uma foto da marca e do tamanho pelo WhatsApp que a gente confere."],
   ["Vocês têm copo de liquidificador?", "Temos dezenas de modelos. Olhe a marca e o modelo na etiqueta embaixo da base, ou traga a base até a loja."],
-  ["Qual o horário de atendimento?", "Segunda a sexta, das 8h às 17h, e sábado das 8h às 13h."],
+  ["Qual o horário de atendimento?", "Segunda a sexta, das 8h às 18h, e sábado das 8h às 13h. Domingo fechado."],
   ["Onde fica a loja?", "Na R. Nove de Julho, no Centro de Salto, SP. É a loja de fachada lilás."],
   ["Atendem outras cidades?", "Sim. Recebemos clientes de Itu, Indaiatuba, Porto Feliz, Elias Fausto, Cabreúva e região."],
 ];
