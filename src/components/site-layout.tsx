@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { ADDRESS, CIDADES, PHONE_DISPLAY, PHONE_TEL, WHATSAPP } from "@/lib/site";
+import { ADDRESS, CIDADES, CONTATO_DISPLAY, CONTATO_TEL, PHONE_DISPLAY, PHONE_TEL, WHATSAPP, WHATSAPP_DISPLAY } from "@/lib/site";
 import logo from "@/assets/logo-salto-lar.webp.asset.json";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
@@ -79,7 +79,9 @@ export function SiteFooter() {
           <div>
             <p className="font-bold text-primary-foreground">Visite</p>
             <p>{ADDRESS}</p>
-            <a href={PHONE_TEL} className="underline underline-offset-4">{PHONE_DISPLAY}</a>
+            <a href={PHONE_TEL} className="block underline underline-offset-4">Tel: {PHONE_DISPLAY}</a>
+            <a href={CONTATO_TEL} className="block underline underline-offset-4">Contato: {CONTATO_DISPLAY}</a>
+            <a href={WHATSAPP} target="_blank" rel="noreferrer" className="block underline underline-offset-4">WhatsApp: {WHATSAPP_DISPLAY}</a>
           </div>
           <div>
             <p className="font-bold text-primary-foreground">Atendemos</p>

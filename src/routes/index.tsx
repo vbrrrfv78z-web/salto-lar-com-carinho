@@ -9,7 +9,7 @@ import toalhas from "@/assets/toalhas-mesa.jpg.asset.json";
 import duchas from "@/assets/duchas-eletrica.jpg.asset.json";
 import caixas from "@/assets/caixas-termicas.jpg.asset.json";
 
-import { ADDRESS, MAPS, PHONE_DISPLAY, WHATSAPP, pageHead } from "@/lib/site";
+import { ADDRESS, CONTATO_DISPLAY, CONTATO_TEL, MAPS, PHONE_DISPLAY, PHONE_TEL, WHATSAPP, WHATSAPP_DISPLAY, pageHead } from "@/lib/site";
 import { WhatsIcon } from "@/components/site-layout";
 import { Link } from "@tanstack/react-router";
 
@@ -148,7 +148,7 @@ function Index() {
             <div className="mt-8 space-y-5 text-lg">
               <div><p className="text-sm font-bold uppercase tracking-wider text-lilac">Endereço</p><p>{ADDRESS}</p></div>
               <div><p className="text-sm font-bold uppercase tracking-wider text-lilac">Horários</p><p>Segunda a sexta, 8h às 17h<br />Sábado, 8h às 13h</p></div>
-              <div><p className="text-sm font-bold uppercase tracking-wider text-lilac">Telefone</p><a href="tel:+551145678912" className="underline underline-offset-4">{PHONE_DISPLAY}</a></div>
+              <div><p className="text-sm font-bold uppercase tracking-wider text-lilac">Telefone</p><a href={PHONE_TEL} className="underline underline-offset-4">{PHONE_DISPLAY}</a><br /><a href={CONTATO_TEL} className="underline underline-offset-4">{CONTATO_DISPLAY}</a> (contato)<br /><a href={WHATSAPP} target="_blank" rel="noreferrer" className="underline underline-offset-4">{WHATSAPP_DISPLAY}</a> (WhatsApp)</div>
             </div>
           </div>
           <div className="flex flex-col justify-end gap-3">

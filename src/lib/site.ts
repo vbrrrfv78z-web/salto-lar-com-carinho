@@ -1,12 +1,12 @@
 export const SITE_URL = "https://salto-lar-com-carinho.lovable.app";
-export const PHONE_DISPLAY = "(11) 4567-8912";
-export const PHONE_TEL = "tel:+551145678912";
+export const PHONE_DISPLAY = "(11) 4028-1879";
+export const PHONE_TEL = "tel:+551140281879";
 export const WHATSAPP =
-  "https://wa.me/551145678912?text=" + encodeURIComponent("Olá, Salto Lar! Gostaria de uma ajuda.");
-export const ADDRESS = "R. Nove de Julho, 886 — Centro, Salto - SP";
+  "https://wa.me/5511945338583?text=" + encodeURIComponent("Olá, Salto Lar! Gostaria de uma ajuda.");
+export const ADDRESS = "R. Nove de Julho, 849 — Centro, Salto - SP";
 export const MAPS =
   "https://www.google.com/maps/search/?api=1&query=" +
-  encodeURIComponent("Salto Lar, R. Nove de Julho, 886, Salto - SP");
+  encodeURIComponent("Salto Lar, R. Nove de Julho, 849, Salto - SP");
 export const CIDADES = ["Salto", "Itu", "Indaiatuba", "Porto Feliz", "Elias Fausto", "Cabreúva"];
 
 /** Builds a per-page head() with title, description, og tags and self canonical. */
@@ -25,3 +25,6 @@ export function pageHead(path: string, title: string, description: string, type 
     links: [{ rel: "canonical", href: url }],
   };
 }
+export const CONTATO_DISPLAY = "(11) 98457-1465";
+export const CONTATO_TEL = "tel:+5511984571465";
+export const WHATSAPP_DISPLAY = "(11) 94533-8583";
