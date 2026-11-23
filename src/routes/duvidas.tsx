@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero, WhatsCta } from "@/components/site-layout";
-import { pageHead } from "@/lib/site";
+import { breadcrumbSchema, pageHead } from "@/lib/site";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const faqs = [
@@ -16,10 +16,11 @@ export const Route = createFileRoute("/duvidas")({
   head: () => ({
     ...pageHead(
       "/duvidas",
-      "Dúvidas Frequentes — Conserto de Panela e Peças | Salto Lar",
+      "Dúvidas sobre Conserto de Panela | Salto Lar",
       "Respostas sobre conserto de panela de pressão, peças, copos de liquidificador, horários e cidades atendidas pela Salto Lar em Salto, SP.",
     ),
     scripts: [
+      { type: "application/ld+json", children: JSON.stringify(breadcrumbSchema("/duvidas", "Dúvidas frequentes")) },
       {
         type: "application/ld+json",
         children: JSON.stringify({
@@ -36,13 +37,13 @@ export const Route = createFileRoute("/duvidas")({
 function Duvidas() {
   return (
     <>
-      <PageHero eyebrow="Tire suas dúvidas" title="Perguntas frequentes sobre conserto e peças" text="Não achou sua resposta? Chama a gente no WhatsApp." />
+      <PageHero eyebrow="Tire suas dúvidas" title="Dúvidas sobre conserto de panela de pressão e peças" text="Não achou sua resposta? Chama a gente no WhatsApp." />
       <section className="mx-auto max-w-3xl px-5 py-14">
-        <h2 className="sr-only">Perguntas e respostas</h2>
+        <h2 className="sr-only">Conserto de panela de pressão: perguntas e respostas</h2>
         <Accordion type="single" collapsible defaultValue="item-0">
           {faqs.map(([q, a], i) => (
             <AccordionItem key={q} value={`item-${i}`}>
-              <AccordionTrigger className="text-left text-lg font-bold text-brand-deep"><h3>{q}</h3></AccordionTrigger>
+              <AccordionTrigger className="text-left text-lg font-bold text-brand-deep">{q}</AccordionTrigger>
               <AccordionContent className="text-base text-muted-foreground">{a}</AccordionContent>
             </AccordionItem>
           ))}

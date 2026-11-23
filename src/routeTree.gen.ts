@@ -13,6 +13,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as CidadesAtendidasRouteImport } from './routes/cidades-atendidas'
 import { Route as DuvidasRouteImport } from './routes/duvidas'
+import { Route as PrivacidadeRouteImport } from './routes/privacidade'
 import { Route as ProdutosRouteImport } from './routes/produtos'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as SobreRouteImport } from './routes/sobre'
@@ -37,6 +38,11 @@ const CidadesAtendidasRoute = CidadesAtendidasRouteImport.update({
 const DuvidasRoute = DuvidasRouteImport.update({
   id: '/duvidas',
   path: '/duvidas',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacidadeRoute = PrivacidadeRouteImport.update({
+  id: '/privacidade',
+  path: '/privacidade',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ProdutosRoute = ProdutosRouteImport.update({
@@ -70,6 +76,7 @@ export interface FileRoutesByFullPath {
   '/blog': typeof BlogRouteWithChildren
   '/cidades-atendidas': typeof CidadesAtendidasRoute
   '/duvidas': typeof DuvidasRoute
+  '/privacidade': typeof PrivacidadeRoute
   '/produtos': typeof ProdutosRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sobre': typeof SobreRoute
@@ -80,6 +87,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/cidades-atendidas': typeof CidadesAtendidasRoute
   '/duvidas': typeof DuvidasRoute
+  '/privacidade': typeof PrivacidadeRoute
   '/produtos': typeof ProdutosRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sobre': typeof SobreRoute
@@ -92,6 +100,7 @@ export interface FileRoutesById {
   '/blog': typeof BlogRouteWithChildren
   '/cidades-atendidas': typeof CidadesAtendidasRoute
   '/duvidas': typeof DuvidasRoute
+  '/privacidade': typeof PrivacidadeRoute
   '/produtos': typeof ProdutosRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sobre': typeof SobreRoute
@@ -105,6 +114,7 @@ export interface FileRouteTypes {
     | '/blog'
     | '/cidades-atendidas'
     | '/duvidas'
+    | '/privacidade'
     | '/produtos'
     | '/sitemap.xml'
     | '/sobre'
@@ -115,6 +125,7 @@ export interface FileRouteTypes {
     | '/'
     | '/cidades-atendidas'
     | '/duvidas'
+    | '/privacidade'
     | '/produtos'
     | '/sitemap.xml'
     | '/sobre'
@@ -126,6 +137,7 @@ export interface FileRouteTypes {
     | '/blog'
     | '/cidades-atendidas'
     | '/duvidas'
+    | '/privacidade'
     | '/produtos'
     | '/sitemap.xml'
     | '/sobre'
@@ -138,6 +150,7 @@ export interface RootRouteChildren {
   BlogRoute: typeof BlogRouteWithChildren
   CidadesAtendidasRoute: typeof CidadesAtendidasRoute
   DuvidasRoute: typeof DuvidasRoute
+  PrivacidadeRoute: typeof PrivacidadeRoute
   ProdutosRoute: typeof ProdutosRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   SobreRoute: typeof SobreRoute
@@ -171,6 +184,13 @@ declare module '@tanstack/react-router' {
       path: '/duvidas'
       fullPath: '/duvidas'
       preLoaderRoute: typeof DuvidasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacidade': {
+      id: '/privacidade'
+      path: '/privacidade'
+      fullPath: '/privacidade'
+      preLoaderRoute: typeof PrivacidadeRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/produtos': {
@@ -228,6 +248,7 @@ const rootRouteChildren: RootRouteChildren = {
   BlogRoute: BlogRouteWithChildren,
   CidadesAtendidasRoute: CidadesAtendidasRoute,
   DuvidasRoute: DuvidasRoute,
+  PrivacidadeRoute: PrivacidadeRoute,
   ProdutosRoute: ProdutosRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   SobreRoute: SobreRoute,

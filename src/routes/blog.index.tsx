@@ -7,8 +7,8 @@ export const Route = createFileRoute("/blog/")({
   head: () =>
     pageHead(
       "/blog",
-      "Blog Salto Lar — Dicas de Casa, Panela de Pressão e Peças",
-      "Dicas da Salto Lar para cuidar da panela de pressão, achar a peça certa e fazer as coisas da casa durarem mais.",
+      "Blog de Panela de Pressão e Peças | Salto Lar",
+      "Leia o blog da Salto Lar: dicas de panela de pressão, copos de liquidificador e peças de reposição para cuidar da casa e evitar trocas desnecessárias.",
     ),
   component: Blog,
 });
@@ -16,7 +16,7 @@ export const Route = createFileRoute("/blog/")({
 function Blog() {
   return (
     <>
-      <PageHero eyebrow="Blog" title="Dicas de casa da Salto Lar" text="Conselhos do balcão para sua casa durar mais — e gastar menos." />
+      <PageHero eyebrow="Blog" title="Blog Salto Lar: dicas de panela de pressão e peças" text="Conselhos do balcão para sua casa durar mais — e gastar menos." />
       <section className="mx-auto grid max-w-4xl gap-6 px-5 py-14">
         {POSTS.map((p) => (
           <article key={p.slug} className="rounded-2xl border border-border bg-card p-6">

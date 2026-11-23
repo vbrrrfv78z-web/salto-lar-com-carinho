@@ -3,7 +3,9 @@ import { useState } from "react";
 import { ADDRESS, CIDADES, CONTATO_DISPLAY, CONTATO_TEL, PHONE_DISPLAY, PHONE_TEL, WHATSAPP, WHATSAPP_DISPLAY } from "@/lib/site";
 import logo from "@/assets/logo-salto-lar.webp.asset.json";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { PrivacyConsent } from "@/components/privacy-consent";
+import { SiteSearch } from "@/components/site-navigation";
+import { Menu, X, ArrowUp } from "lucide-react";
 
 export function WhatsIcon() {
   return (
@@ -38,6 +40,7 @@ export function SiteHeader() {
           ))}
         </nav>
         <div className="flex items-center gap-2">
+          <SiteSearch />
           <a href={WHATSAPP} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2.5 text-sm font-bold text-primary-foreground">
             <WhatsIcon /> <span className="hidden sm:inline">Falar com a loja</span>
           </a>
@@ -73,7 +76,7 @@ export function SiteFooter() {
       <footer className="bg-brand-deep py-10 text-sm text-primary-foreground/75">
         <div className="mx-auto grid max-w-6xl gap-6 px-5 sm:grid-cols-3">
           <div>
-            <p className="font-display text-lg text-primary-foreground">Salto Lar</p>
+            <Link to="/" className="font-display text-lg text-primary-foreground">Salto Lar</Link>
             <p>Tudo para seu lar · Loja de família em Salto, SP</p>
           </div>
           <div>
@@ -87,6 +90,11 @@ export function SiteFooter() {
             <p className="font-bold text-primary-foreground">Atendemos</p>
             <p>{CIDADES.join(", ")} e região.</p>
           </div>
+        </div>
+        <div className="mx-auto mt-8 flex max-w-6xl flex-wrap items-center justify-between gap-4 border-t border-primary-foreground/20 px-5 pt-6">
+          <Link to="/privacidade" className="underline underline-offset-4">Política de privacidade</Link>
+          <PrivacyConsent />
+          <Button variant="ghost" size="icon" title="Voltar ao topo" aria-label="Voltar ao topo" onClick={() => window.scrollTo({ top: 0, behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" })}><ArrowUp /></Button>
         </div>
       </footer>
       <a href={WHATSAPP} target="_blank" rel="noreferrer" aria-label="Falar no WhatsApp" className="fixed bottom-5 right-5 z-40 grid h-14 w-14 place-items-center rounded-full bg-whatsapp text-primary-foreground shadow-soft md:hidden">

@@ -1,13 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
-import reginaldo from "@/assets/reginaldo.webp.asset.json";
-import pecasPanela from "@/assets/pecas-panela.jpg.asset.json";
-import copos from "@/assets/copos-liquidificador.jpg.asset.json";
-import moveis from "@/assets/acessorios-moveis.jpg.asset.json";
-import churrasqueiras from "@/assets/churrasqueiras.jpg.asset.json";
-import aspirador from "@/assets/sacos-aspirador.jpg.asset.json";
-import toalhas from "@/assets/toalhas-mesa.jpg.asset.json";
-import duchas from "@/assets/duchas-eletrica.jpg.asset.json";
-import caixas from "@/assets/caixas-termicas.jpg.asset.json";
+import reginaldo from "@/assets/reginaldo-otimizado.webp.asset.json";
+import pecasPanela from "@/assets/pecas-panela.webp.asset.json";
+import copos from "@/assets/copos-liquidificador.webp.asset.json";
+import moveis from "@/assets/acessorios-moveis.webp.asset.json";
+import churrasqueiras from "@/assets/churrasqueiras.webp.asset.json";
+import aspirador from "@/assets/sacos-aspirador.webp.asset.json";
+import toalhas from "@/assets/toalhas-mesa.webp.asset.json";
+import duchas from "@/assets/duchas-eletrica.webp.asset.json";
+import caixas from "@/assets/caixas-isopor.webp.asset.json";
 
 import { ADDRESS, CONTATO_DISPLAY, CONTATO_TEL, MAPS, PHONE_DISPLAY, PHONE_TEL, WHATSAPP, WHATSAPP_DISPLAY, pageHead } from "@/lib/site";
 import { WhatsIcon } from "@/components/site-layout";
@@ -18,8 +18,8 @@ export const Route = createFileRoute("/")({
   head: () =>
     pageHead(
       "/",
-      "Conserto de Panela de Pressão e Peças em Salto, SP | Salto Lar",
-      "Loja de família em Salto, SP: conserto de panela de pressão, peças, copos de liquidificador e utilidades para casa. Atendemos Itu, Indaiatuba e região.",
+      "Conserto de Panela de Pressão em Salto | Salto Lar",
+      "Conserto de panela de pressão em Salto na Salto Lar. Peças, copos de liquidificador e utilidades para clientes de Itu, Indaiatuba e região.",
     ),
 });
 
@@ -76,7 +76,7 @@ function Index() {
             ["Peça certa de primeira", "Traga a peça antiga ou uma foto. A gente compara na hora."],
           ].map(([t, d]) => (
             <div key={t}>
-              <h3 className="font-display text-xl font-semibold text-primary">{t}</h3>
+              <h2 className="font-display text-xl font-semibold text-primary">{t}</h2>
               <p className="mt-1 text-muted-foreground">{d}</p>
             </div>
           ))}
@@ -86,11 +86,11 @@ function Index() {
       {/* Conserto — dobra roxa */}
       <section id="conserto" className="bg-primary text-primary-foreground">
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-5 py-16 md:grid-cols-2 md:py-24">
-          <img src={pecasPanela.url} alt="Cabos, alças e válvulas para panela de pressão" loading="lazy" decoding="async" className="aspect-square w-full rounded-3xl object-cover md:order-2" />
+          <img src={pecasPanela.url} alt="Cabos, alças e válvulas para panela de pressão" loading="lazy" decoding="async" width={768} height={1024} className="aspect-square w-full rounded-3xl object-cover md:order-2" />
           <div>
             <p className="text-xs font-extrabold uppercase tracking-[0.18em] text-lilac">Conserto de panelas</p>
             <p className="mt-2 font-display text-xl text-lilac">Antes de trocar, traz aqui que a gente olha.</p>
-            <h2 className="mt-3 font-display text-3xl font-semibold leading-tight sm:text-4xl md:text-5xl">Sua panela de pressão ainda tem muita história pra contar.</h2>
+            <h2 className="mt-3 font-display text-3xl font-semibold leading-tight sm:text-4xl md:text-5xl">Conserto de panela de pressão em Salto, com cuidado.</h2>
             <p className="mt-5 text-lg text-primary-foreground/85">Trocamos cabo, alça, borracha, válvula e pino de diversas marcas. Também damos uma olhada em pequenos eletrodomésticos.</p>
             <ol className="mt-8 space-y-4">
               {[
@@ -115,7 +115,7 @@ function Index() {
         <div className="mt-10 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
           {categorias.map((c) => (
             <article key={c.title} className="overflow-hidden rounded-2xl border border-border bg-card">
-              <img src={c.img} alt={c.title} loading="lazy" decoding="async" className="aspect-[4/5] w-full object-cover" />
+              <img src={c.img} alt={c.title} loading="lazy" decoding="async" width={768} height={1024} className="aspect-[4/5] w-full object-cover" />
               <div className="p-3 sm:p-4">
                 <h3 className="font-bold leading-snug text-brand-deep">{c.title}</h3>
                 <p className="mt-1 text-sm text-muted-foreground">{c.text}</p>
@@ -160,6 +160,15 @@ function Index() {
             </a>
           </div>
         </div>
+      </section>
+
+      <section className="mx-auto max-w-3xl px-5 py-12">
+        <h2 className="font-display text-3xl font-semibold text-brand-deep">Dúvidas sobre conserto de panela de pressão</h2>
+        <div className="mt-6 space-y-6">
+          <div><h3 className="font-bold text-primary">Preciso levar a panela até a loja?</h3><p className="mt-2 text-muted-foreground">Uma foto ajuda na primeira conversa. Para conferir a peça e avaliar o conserto, traga a panela ou a tampa ao balcão.</p></div>
+          <div><h3 className="font-bold text-primary">Como encontro o copo certo do liquidificador?</h3><p className="mt-2 text-muted-foreground">Mande a marca e o modelo ou traga a base. A gente compara o encaixe antes de você comprar.</p></div>
+        </div>
+        <Link to="/duvidas" className="mt-6 inline-block font-bold text-primary underline underline-offset-4">Ver todas as perguntas frequentes</Link>
       </section>
 
     </div>

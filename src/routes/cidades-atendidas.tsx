@@ -6,7 +6,7 @@ export const Route = createFileRoute("/cidades-atendidas")({
   head: () =>
     pageHead(
       "/cidades-atendidas",
-      "Conserto de Panela e Peças em Salto, Itu, Indaiatuba e Região | Salto Lar",
+      "Conserto de Panela em Salto e Região | Salto Lar",
       "A Salto Lar atende clientes de Salto, Itu, Indaiatuba, Porto Feliz, Elias Fausto e Cabreúva com conserto de panela de pressão e peças para casa.",
     ),
   component: Cidades,
@@ -24,13 +24,12 @@ const detalhes: Record<string, string> = {
 function Cidades() {
   return (
     <>
-      <PageHero eyebrow="Cidades atendidas" title="Conserto de panela e peças para casa em Salto e região" text="Somos de Salto, mas recebemos clientes de toda a região. Confirme pelo WhatsApp se temos a peça e venha buscar." />
+      <PageHero eyebrow="Cidades atendidas" title="Conserto de panela de pressão em Salto e região" text="Somos de Salto, mas recebemos clientes de toda a região. Confirme pelo WhatsApp se temos a peça e venha buscar." />
       <section className="mx-auto max-w-6xl px-5 py-14">
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {CIDADES.map((c) => (
             <article key={c} className="rounded-2xl border border-border bg-card p-6">
-              <h2 className="font-display text-2xl font-semibold text-primary">{c}</h2>
-              <h3 className="mt-2 text-sm font-bold text-brand-deep">Conserto de panela de pressão e peças em {c}</h3>
+              <h2 className="font-display text-2xl font-semibold text-primary">Conserto de panela de pressão: clientes de {c}</h2>
               <p className="mt-2 text-muted-foreground">{detalhes[c]}</p>
             </article>
           ))}

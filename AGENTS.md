@@ -32,3 +32,7 @@ use the editor.
 - Shared header/footer live in src/components/site-layout.tsx and wrap <Outlet /> in __root; per-page SEO uses pageHead() from src/lib/site.ts so every route has its own title/description/canonical.
 - Blog posts are static in src/lib/posts.ts until a posting panel exists; sitemap.xml is generated from the page list plus POSTS.
 - Keep supplied branding pixels unchanged; serve optimized photo/logo assets through CDN pointers and derive the local favicon from the same logo.
+- Share page discovery and search through src/lib/navigation.ts; this keeps internal links and search results aligned with public content.
+- Load the measurement container only after explicit browser consent; use local storage solely for this device preference, not customer data.
+- Privacy pages are noindex and excluded from the curated sitemap; keep only indexable public content in that list.
+- Emit shared breadcrumb/website/business schemas through pageHead and preserve them when leaf routes add their own schemas to avoid missing or duplicated structured data.
