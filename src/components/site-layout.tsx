@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { ADDRESS, CIDADES, CONTATO_DISPLAY, CONTATO_TEL, PHONE_DISPLAY, PHONE_TEL, WHATSAPP_DISPLAY } from "@/lib/site";
 import { WhatsLeadForm } from "@/components/whats-lead-form";
-import logo from "@/assets/logo-salto-lar.webp.asset.json";
+import logo from "@/assets/logo-salto-lar-transparente.webp.asset.json";
 import { Button } from "@/components/ui/button";
 import { PrivacyConsent } from "@/components/privacy-consent";
 import { SiteSearch } from "@/components/site-navigation";
@@ -30,8 +30,8 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-30 border-b border-border bg-background/95 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-5 py-3">
-        <Link to="/" aria-label="Salto Lar — início" className="shrink-0 overflow-hidden rounded-md bg-logo-surface px-2 py-1.5" onClick={() => setOpen(false)}>
-          <img src={logo.url} alt="Salto Lar — Tudo para seu lar" width={600} height={334} className="h-12 w-auto sm:h-14" decoding="async" />
+        <Link to="/" aria-label="Salto Lar — início" className="shrink-0 px-1 py-1" onClick={() => setOpen(false)}>
+          <img src={logo.url} alt="Salto Lar — Tudo para seu lar" width={210} height={118} className="h-12 w-auto sm:h-14" decoding="async" />
         </Link>
         <nav className="hidden gap-6 text-sm font-semibold text-foreground/80 lg:flex">
           {NAV.map((n) => (
