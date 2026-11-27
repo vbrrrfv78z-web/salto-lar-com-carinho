@@ -36,3 +36,4 @@ use the editor.
 - Load the measurement container only after explicit browser consent; use local storage solely for this device preference, not customer data.
 - Privacy pages are noindex and excluded from the curated sitemap; keep only indexable public content in that list.
 - Emit shared breadcrumb/website/business schemas through pageHead and preserve them when leaf routes add their own schemas to avoid missing or duplicated structured data.
+- WhatsApp CTAs use href="#whatsapp" + class open-frm-whatsapp-1; a global click listener in src/components/whats-lead-form.tsx opens the lead popup, posts to Google Sheets (src/lib/lead.ts) then redirects to WhatsApp. Why: client-required lead capture with UTMs persisted in localStorage.

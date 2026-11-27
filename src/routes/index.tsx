@@ -9,7 +9,7 @@ import toalhas from "@/assets/toalhas-mesa.webp.asset.json";
 import duchas from "@/assets/duchas-eletrica.webp.asset.json";
 import caixas from "@/assets/caixas-isopor.webp.asset.json";
 
-import { ADDRESS, CONTATO_DISPLAY, CONTATO_TEL, MAPS, PHONE_DISPLAY, PHONE_TEL, WHATSAPP, WHATSAPP_DISPLAY, pageHead } from "@/lib/site";
+import { ADDRESS, CONTATO_DISPLAY, CONTATO_TEL, MAPS, PHONE_DISPLAY, PHONE_TEL, WHATSAPP_DISPLAY, pageHead } from "@/lib/site";
 import { WhatsIcon } from "@/components/site-layout";
 import { Link } from "@tanstack/react-router";
 
@@ -49,7 +49,7 @@ function Index() {
               Consertamos sua panela, achamos a peça que falta e explicamos as opções com sinceridade — mesmo quando a melhor saída é a mais barata.
             </p>
             <div className="mt-6 flex flex-col gap-3 xl:flex-row">
-              <a href={WHATSAPP} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-4 font-bold text-primary-foreground shadow-soft">
+              <a href="#whatsapp" className="open-frm-whatsapp-1 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-4 font-bold text-primary-foreground shadow-soft">
                 <WhatsIcon /> Mandar foto pelo WhatsApp
               </a>
               <a href="#visite" className="inline-flex items-center justify-center rounded-full border-2 border-brand-deep/30 px-6 py-4 font-bold text-brand-deep">
@@ -148,11 +148,11 @@ function Index() {
             <div className="mt-8 space-y-5 text-lg">
               <div><p className="text-sm font-bold uppercase tracking-wider text-lilac">Endereço</p><p>{ADDRESS}</p></div>
               <div><p className="text-sm font-bold uppercase tracking-wider text-lilac">Horários</p><p>Segunda a sexta, 8h às 18h<br />Sábado, 8h às 13h<br />Domingo fechado</p></div>
-              <div><p className="text-sm font-bold uppercase tracking-wider text-lilac">Telefone</p><a href={PHONE_TEL} className="underline underline-offset-4">{PHONE_DISPLAY}</a><br /><a href={CONTATO_TEL} className="underline underline-offset-4">{CONTATO_DISPLAY}</a> (contato)<br /><a href={WHATSAPP} target="_blank" rel="noreferrer" className="underline underline-offset-4">{WHATSAPP_DISPLAY}</a> (WhatsApp)</div>
+              <div><p className="text-sm font-bold uppercase tracking-wider text-lilac">Telefone</p><a href={PHONE_TEL} className="underline underline-offset-4">{PHONE_DISPLAY}</a><br /><a href={CONTATO_TEL} className="underline underline-offset-4">{CONTATO_DISPLAY}</a> (contato)<br /><a href="#whatsapp" className="open-frm-whatsapp-1 underline underline-offset-4">{WHATSAPP_DISPLAY}</a> (WhatsApp)</div>
             </div>
           </div>
           <div className="flex flex-col justify-end gap-3">
-            <a href={WHATSAPP} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full bg-whatsapp px-6 py-4 text-lg font-bold text-primary-foreground">
+            <a href="#whatsapp" className="open-frm-whatsapp-1 inline-flex items-center justify-center gap-2 rounded-full bg-whatsapp px-6 py-4 text-lg font-bold text-primary-foreground">
               <WhatsIcon /> Chamar no WhatsApp
             </a>
             <a href={MAPS} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center rounded-full bg-lilac px-6 py-4 text-lg font-bold text-accent-foreground">

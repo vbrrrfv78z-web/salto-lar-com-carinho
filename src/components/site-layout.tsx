@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { ADDRESS, CIDADES, CONTATO_DISPLAY, CONTATO_TEL, PHONE_DISPLAY, PHONE_TEL, WHATSAPP, WHATSAPP_DISPLAY } from "@/lib/site";
+import { ADDRESS, CIDADES, CONTATO_DISPLAY, CONTATO_TEL, PHONE_DISPLAY, PHONE_TEL, WHATSAPP_DISPLAY } from "@/lib/site";
+import { WhatsLeadForm } from "@/components/whats-lead-form";
 import logo from "@/assets/logo-salto-lar.webp.asset.json";
 import { Button } from "@/components/ui/button";
 import { PrivacyConsent } from "@/components/privacy-consent";
@@ -41,7 +42,7 @@ export function SiteHeader() {
         </nav>
         <div className="flex items-center gap-2">
           <SiteSearch />
-          <a href={WHATSAPP} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2.5 text-sm font-bold text-primary-foreground">
+          <a href="#whatsapp" className="open-frm-whatsapp-1 inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2.5 text-sm font-bold text-primary-foreground">
             <WhatsIcon /> <span className="hidden sm:inline">Falar com a loja</span>
           </a>
           <Button
@@ -84,7 +85,7 @@ export function SiteFooter() {
             <p>{ADDRESS}</p>
             <a href={PHONE_TEL} className="block underline underline-offset-4">Tel: {PHONE_DISPLAY}</a>
             <a href={CONTATO_TEL} className="block underline underline-offset-4">Contato: {CONTATO_DISPLAY}</a>
-            <a href={WHATSAPP} target="_blank" rel="noreferrer" className="block underline underline-offset-4">WhatsApp: {WHATSAPP_DISPLAY}</a>
+            <a href="#whatsapp" className="open-frm-whatsapp-1 block underline underline-offset-4">WhatsApp: {WHATSAPP_DISPLAY}</a>
           </div>
           <div>
             <p className="font-bold text-primary-foreground">Atendemos</p>
@@ -97,9 +98,10 @@ export function SiteFooter() {
           <Button variant="ghost" size="icon" title="Voltar ao topo" aria-label="Voltar ao topo" onClick={() => window.scrollTo({ top: 0, behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" })}><ArrowUp /></Button>
         </div>
       </footer>
-      <a href={WHATSAPP} target="_blank" rel="noreferrer" aria-label="Falar no WhatsApp" className="fixed bottom-5 right-5 z-40 grid h-14 w-14 place-items-center rounded-full bg-whatsapp text-primary-foreground shadow-soft md:hidden">
+      <a href="#whatsapp" aria-label="Falar no WhatsApp" className="open-frm-whatsapp-1 fixed bottom-5 right-5 z-40 grid h-14 w-14 place-items-center rounded-full bg-whatsapp text-primary-foreground shadow-soft">
         <WhatsIcon />
       </a>
+      <WhatsLeadForm />
     </>
   );
 }
@@ -118,7 +120,7 @@ export function PageHero({ eyebrow, title, text }: { eyebrow: string; title: str
 
 export function WhatsCta({ text = "Chamar no WhatsApp" }: { text?: string }) {
   return (
-    <a href={WHATSAPP} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-4 font-bold text-primary-foreground shadow-soft">
+    <a href="#whatsapp" className="open-frm-whatsapp-1 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-4 font-bold text-primary-foreground shadow-soft">
       <WhatsIcon /> {text}
     </a>
   );
